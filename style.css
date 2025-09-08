@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+  font-family: "Courier New", monospace;
+  color: #00ffcc;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Clock styling */
+.flip-clock {
+  display: flex;
+  align-items: center;
+  font-size: 80px;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.flip {
+  position: relative;
+  width: 120px;
+  height: 150px;
+  background: #000;
+  color: #00ffcc;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 150px;
+  box-shadow: 0 0 25px #00ffcc;
+  perspective: 1000px;
+  font-weight: bold;
+}
+
+.flip span {
+  display: block;
+  font-size: 100px;
+}
+
+.flip.animate {
+  animation: flip 0.6s ease forwards;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+/* Date styling */
+.date-box {
+  font-size: 28px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px #00ffcc;
+}
